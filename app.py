@@ -41,7 +41,7 @@ def page_post_upload():
     # Получаем имя файла у загруженного фала
     name = picture.filename
     # Сохраняем картинку под родным именем в папку uploads
-    picture.save(f"./uploads/{name}")
+    picture.save(f"./uploads/images/{name}")
     return render_template('post_uploaded.html', name=name)
 
 
