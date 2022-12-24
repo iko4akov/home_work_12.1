@@ -9,7 +9,7 @@ from main.view import index_blueprint
 # импортируем блюпринт для загрузки фото
 from loader.view import loader_blueprint
 
-POST_PATH = "posts.json"
+POST_PATH = "posts.son"
 UPLOAD_FOLDER = "uploads/images"
 
 app = Flask(__name__)
@@ -63,6 +63,7 @@ def page_post_upload():
 
 @app.route("/uploads/<path:path>")
 def static_dir(path):
+    """Пока хз зачем здесь эта вьюшка"""
     return send_from_directory("uploads", path)
 
 
