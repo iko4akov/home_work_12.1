@@ -10,3 +10,8 @@ def load_posts(filename):
         posts = json.load(f)
         return posts
 
+def add_post(filename, data):
+    with open(filename, "w", encoding="utf-8") as file:
+        json.dump(data, file, ensure_ascii=False)
+        return "posts.json перезаписан"
+
